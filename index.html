@@ -45,11 +45,24 @@
             padding: 0 20px;
         }
 
+        @media (max-width: 768px) {
+            .container {
+                max-width: 100%;
+                padding: 0 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 12px;
+            }
+        }
+
         /* Hero Section */
         .hero {
             background: linear-gradient(135deg, #0066CC 0%, #0052A3 100%);
             color: white;
-            padding: 60px 20px;
+            padding: 60px 0;
             text-align: center;
         }
 
@@ -211,7 +224,7 @@
 
         /* Section Styles */
         section {
-            padding: 50px 20px;
+            padding: 50px 0;
         }
 
         .section-light {
@@ -247,7 +260,7 @@
         /* NEW Psychologist Section Styles */
         .psychologist-section {
             background: linear-gradient(180deg, #e8f4fc 0%, #d4ecf9 100%);
-            padding: 60px 20px;
+            padding: 50px 0;
         }
 
         .psychologist-section h2 {
@@ -299,26 +312,6 @@
                 font-size: 0.7em;
                 padding: 8px;
             }
-
-            .container {
-                padding: 0 15px;
-            }
-
-            h2 {
-                font-size: 1.5em;
-            }
-
-            p {
-                font-size: 0.95em;
-            }
-
-            .hero h1 {
-                font-size: 1.6em;
-            }
-
-            .hero .subheadline {
-                font-size: 1em;
-            }
         }
         
         @media (max-width: 480px) {
@@ -356,59 +349,6 @@
             
             .psychologist-section h2 {
                 font-size: 1.3em;
-            }
-
-            h2 {
-                font-size: 1.3em;
-            }
-
-            p {
-                font-size: 0.9em;
-            }
-
-            .hero h1 {
-                font-size: 1.4em;
-            }
-
-            .hero .subheadline {
-                font-size: 0.9em;
-            }
-
-            .pain-points li {
-                font-size: 0.85em;
-            }
-
-            .cta-button {
-                padding: 14px 28px;
-                font-size: 0.95em;
-            }
-
-            .step h3 {
-                font-size: 1em;
-            }
-
-            .step p {
-                font-size: 0.85em;
-            }
-
-            .price-card h3 {
-                font-size: 1.1em;
-            }
-
-            .price-card p {
-                font-size: 0.85em;
-            }
-
-            .new-price {
-                font-size: 1.8em;
-            }
-
-            .testimonial-card .testi-text {
-                font-size: 0.85em;
-            }
-
-            .testimonial-card .testi-author {
-                font-size: 0.75em;
             }
         }
 
@@ -671,7 +611,7 @@
         .footer {
             background: #333;
             color: white;
-            padding: 40px 20px;
+            padding: 40px 0;
             text-align: center;
         }
 
