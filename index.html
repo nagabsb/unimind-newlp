@@ -308,69 +308,35 @@
 
         @media (max-width: 768px) {
             .psychologist-grid-new {
-                grid-template-columns: repeat(3, 1fr);
-                gap: 10px;
+                grid-template-columns: 1fr;
+                gap: 15px;
             }
             
             .psy-card-new {
-                padding: 15px 8px;
+                padding: 20px 15px;
             }
             
             .psy-card-new .psy-name {
+                font-size: 1.1em;
+            }
+            
+            .psy-card-new .psy-photo {
+                width: 100%;
+                height: 250px;
+            }
+            
+            .psy-card-new .experience-badge {
                 font-size: 0.9em;
-            }
-            
-            .psy-card-new .psy-photo {
-                width: 100%;
-                height: 150px;
-            }
-            
-            .psy-card-new .experience-badge {
-                font-size: 0.7em;
-                padding: 5px 10px;
+                padding: 8px 15px;
             }
             
             .psy-card-new .psy-schedule {
-                font-size: 0.7em;
-                padding: 8px;
+                font-size: 0.9em;
+                padding: 12px;
             }
-        }
-        
-        @media (max-width: 480px) {
-            .psychologist-grid-new {
-                grid-template-columns: repeat(3, 1fr);
-                gap: 6px;
-            }
-            
-            .psy-card-new {
-                padding: 8px 4px;
-                border-radius: 10px;
-            }
-            
-            .psy-card-new .psy-name {
-                font-size: 0.65em;
-                margin-bottom: 8px;
-            }
-            
-            .psy-card-new .psy-photo {
-                width: 100%;
-                height: 80px;
-                border-radius: 8px;
-            }
-            
-            .psy-card-new .experience-badge {
-                font-size: 0.5em;
-                padding: 3px 6px;
-            }
-            
-            .psy-card-new .psy-schedule {
-                font-size: 0.5em;
-                padding: 5px;
-                border-radius: 6px;
-            }
-            
+
             .psychologist-section h2 {
-                font-size: 1.3em;
+                font-size: 1.5em;
             }
         }
 
@@ -853,7 +819,7 @@
         <div class="container">
             <h2>Kenalan Dulu Sama Psikolog yang Siap Dengar Cerita Kamu</h2>
             
-            <!-- Row 1 -->
+            <!-- All Psychologists -->
             <div class="psychologist-grid-new">
                 <div class="psy-card-new pink-bg">
                     <div class="psy-name">Dian<br>Junita, M.Psi</div>
@@ -892,10 +858,7 @@
                         Jumat 11.00–17.00
                     </div>
                 </div>
-            </div>
 
-            <!-- Row 2 -->
-            <div class="psychologist-grid-new" style="margin-top: 15px;">
                 <div class="psy-card-new blue-bg">
                     <div class="psy-name">Ikhsan Bella<br>Persada, M.Psi</div>
                     <div class="psy-photo">
