@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unimind Psychology Consultation - UniHealth PIK2</title>
+    
+    <!-- Facebook Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1253119950191123');
+    fbq('track', 'PageView');
+    </script>
+    <noscript>
+        <img height="1" width="1" style="display:none"
+        src="https://www.facebook.com/tr?id=1253119950191123&ev=PageView&noscript=1"/>
+    </noscript>
+    <!-- End Facebook Pixel Code -->
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #0066CC 0%, #0052A3 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            line-height: 1.3;
+        }
+
+        .hero .subheadline {
+            font-size: 1.1em;
+            margin-bottom: 25px;
+            opacity: 0.95;
+            line-height: 1.5;
+        }
+
+        .pain-points {
+            background: rgba(255,255,255,0.95);
+            padding: 25px;
+            border-radius: 20px;
+            margin: 25px auto;
+            max-width: 600px;
+            text-align: left;
+            border: 3px solid #1E5BA8;
+            box-shadow: 0 4px 20px rgba(30,91,168,0.15);
+        }
+
+        .pain-points p {
+            color: #1E5BA8;
+            font-weight: 600;
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+
+        .pain-points ul {
+            list-style: none;
+        }
+
+        .pain-points li {
+            padding: 10px 0;
+            padding-left: 30px;
+            position: relative;
+            font-size: 0.95em;
+            line-height: 1.6;
+            color: #1E5BA8;
+        }
+
+        .pain-points li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+            color: #5BA8D8;
+            font-size: 1.2em;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #25D366;
+            color: white;
+            padding: 18px 40px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.1em;
+            font-weight: bold;
+            margin: 10px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+
+        .secondary-cta {
+            font-size: 0.9em;
+            opacity: 0.9;
+            margin-top: 15px;
+        }
+
+        .clinic-photo-hero {
+            margin: 30px auto;
+            max-width: 600px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+        }
+
+        .clinic-photo-hero img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .clinic-photo-section {
+            margin: 30px auto;
+            max-width: 700px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+        }
+
+        .clinic-photo-section img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Clinic Interior Slideshow */
+        .clinic-slideshow {
+            max-width: 700px;
+            margin: 30px auto;
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+        }
+
+        .clinic-slideshow .slides {
+            position: relative;
+            width: 100%;
+        }
+
+        .clinic-slideshow .slide {
+            width: 100%;
+            height: auto;
+            display: none;
+            transition: opacity 0.5s ease;
+        }
+
+        .clinic-slideshow .slide.active {
+            display: block;
+        }
+
+        .slide-dots {
+            text-align: center;
+            padding: 15px;
+            background: rgba(0,0,0,0.3);
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .slide-dots .dot {
+            height: 12px;
+            width: 12px;
+            margin: 0 5px;
+            background-color: rgba(255,255,255,0.5);
+            border-radius: 50%;
+            display: inline-block;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .slide-dots .dot.active {
+            background-color: #fff;
+        }
+
+        /* Section Styles */
+        section {
+            padding: 50px 20px;
+        }
+
+        .section-light {
+            background: white;
+        }
+
+        .section-gray {
+            background: #f8f9fa;
+        }
+
+        h2 {
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            color: #0066CC;
+            text-align: center;
+            line-height: 1.3;
+            padding: 0 10px;
+        }
+
+        h3 {
+            font-size: 1.3em;
+            margin: 25px 0 15px;
+            color: #0066CC;
+            line-height: 1.3;
+        }
+
+        p {
+            margin-bottom: 20px;
+            font-size: 1em;
+            line-height: 1.7;
+        }
+
+        /* NEW Psychologist Section Styles */
+        .psychologist-section {
+            background: linear-gradient(180deg, #e8f4fc 0%, #d4ecf9 100%);
+            padding: 60px 20px;
+        }
+
+        .psychologist-section h2 {
+            color: #1a3a5c;
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        .psychologist-section .section-subtitle {
+            text-align: center;
+            color: #4a6b8a;
+            font-size: 1.1em;
+            max-width: 800px;
+            margin: 0 auto 50px;
+        }
+
+        .psychologist-grid-new {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        @media (max-width: 768px) {
+            .psychologist-grid-new {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 10px;
+            }
+            
+            .psy-card-new {
+                padding: 15px 8px;
+            }
+            
+            .psy-card-new .psy-name {
+                font-size: 0.9em;
+            }
+            
+            .psy-card-new .psy-photo {
+                width: 100%;
+                height: 150px;
+            }
+            
+            .psy-card-new .experience-badge {
+                font-size: 0.7em;
+                padding: 5px 10px;
+            }
+            
+            .psy-card-new .psy-schedule {
+                font-size: 0.7em;
+                padding: 8px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .psychologist-grid-new {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 6px;
+            }
+            
+            .psy-card-new {
+                padding: 10px 5px;
+                border-radius: 10px;
+            }
+            
+            .psy-card-new .psy-name {
+                font-size: 0.75em;
+                margin-bottom: 10px;
+            }
+            
+            .psy-card-new .psy-photo {
+                width: 100%;
+                height: 100px;
+                border-radius: 8px;
+            }
+            
+            .psy-card-new .experience-badge {
+                font-size: 0.6em;
+                padding: 4px 8px;
+            }
+            
+            .psy-card-new .psy-schedule {
+                font-size: 0.6em;
+                padding: 6px;
+                border-radius: 6px;
+            }
+            
+            .psychologist-section h2 {
+                font-size: 1.4em;
+            }
+        }
+
+        .psy-card-new {
+            text-align: center;
+            padding: 30px 20px;
+            border-radius: 15px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+        }
+
+        .psy-card-new:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .psy-card-new.blue-bg {
+            background: linear-gradient(180deg, #a8d4f0 0%, #8ac4e8 100%);
+        }
+
+        .psy-card-new.pink-bg {
+            background: linear-gradient(180deg, #e8c8e8 0%, #ddb8dd 100%);
+        }
+
+        .psy-card-new .psy-name {
+            font-size: 1.3em;
+            font-style: italic;
+            color: #0066CC;
+            font-weight: 600;
+            margin-bottom: 20px;
+            line-height: 1.3;
+        }
+
+        .psy-card-new .psy-photo {
+            width: 180px;
+            height: 220px;
+            margin: 0 auto 15px;
+            overflow: hidden;
+            border-radius: 10px;
+            background: #f0f0f0;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+        }
+
+        .psy-card-new .psy-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+        }
+
+        .psy-card-new .psy-photo-placeholder {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(180deg, #d0e8f5 0%, #b8dced 100%);
+            font-size: 4em;
+            color: #0066CC;
+        }
+
+        .psy-card-new .experience-badge {
+            display: inline-block;
+            background: #ffd700;
+            color: #333;
+            padding: 8px 18px;
+            border-radius: 25px;
+            font-size: 0.85em;
+            font-weight: bold;
+            margin-top: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .psy-card-new .psy-schedule {
+            margin-top: 15px;
+            padding: 12px;
+            background: rgba(255,255,255,0.7);
+            border-radius: 10px;
+            font-size: 0.85em;
+            color: #333;
+            line-height: 1.5;
+        }
+
+        /* How It Works */
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .step {
+            text-align: center;
+            padding: 25px 15px;
+        }
+
+        .step-number {
+            display: inline-block;
+            width: 55px;
+            height: 55px;
+            background: #0066CC;
+            color: white;
+            border-radius: 50%;
+            line-height: 55px;
+            font-size: 1.4em;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .step h3 {
+            font-size: 1.15em;
+            margin: 15px 0 10px;
+        }
+
+        .step p {
+            font-size: 0.95em;
+        }
+
+        /* Pricing */
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .price-card {
+            background: white;
+            padding: 30px 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .price-card h3 {
+            color: #0066CC;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+
+        .price-card p {
+            font-size: 0.95em;
+        }
+
+        .old-price {
+            text-decoration: line-through;
+            color: #999;
+            font-size: 1.1em;
+        }
+
+        .new-price {
+            font-size: 2.2em;
+            color: #25D366;
+            font-weight: bold;
+            margin: 15px 0;
+        }
+
+        .bonus-card {
+            background: linear-gradient(135deg, #5BA8D8 0%, #4A97C7 100%);
+            color: white;
+        }
+
+        .bonus-card h3 {
+            color: white;
+        }
+
+        .bonus-card p {
+            color: white;
+        }
+
+        /* Testimonials - Stacked Grid */
+        .testimonial-grid-stacked {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        @media (max-width: 900px) {
+            .testimonial-grid-stacked {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .testimonial-grid-stacked {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .testimonial-card {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .testimonial-card .stars {
+            color: #FFD700;
+            font-size: 1.2em;
+            margin-bottom: 12px;
+        }
+
+        .testimonial-card .testi-text {
+            font-style: italic;
+            color: #555;
+            margin-bottom: 15px;
+            font-size: 0.95em;
+            line-height: 1.6;
+        }
+
+        .testimonial-card .testi-author {
+            font-size: 0.85em;
+            color: #0066CC;
+            font-weight: 600;
+            margin-bottom: 0;
+        }
+
+        /* Footer */
+        .footer {
+            background: #333;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .footer-info {
+            margin: 20px 0;
+        }
+
+        .footer-info p {
+            margin: 15px 0;
+        }
+
+        /* Floating WhatsApp Button */
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 40px;
+            right: 40px;
+            background-color: #25D366;
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s;
+            text-decoration: none;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 1.8em;
+            }
+            
+            h2 {
+                font-size: 1.8em;
+            }
+
+            .steps {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    
+    <script>
+        // Function to track Lead event when CTA button is clicked
+        function trackLead() {
+            if (typeof fbq !== 'undefined') {
+                fbq('track', 'Lead');
+                console.log('Facebook Pixel: Lead event tracked');
+            }
+        }
+
+        // Testimonial Carousel Navigation
+        document.addEventListener('DOMContentLoaded', function() {
+            const testimonialGrid = document.getElementById('testimonialGrid');
+            const leftArrow = document.getElementById('leftArrow');
+            const rightArrow = document.getElementById('rightArrow');
+            
+            if (testimonialGrid && leftArrow && rightArrow) {
+                const scrollAmount = 320; // card width + gap
+                
+                leftArrow.addEventListener('click', function() {
+                    testimonialGrid.scrollBy({
+                        left: -scrollAmount,
+                        behavior: 'smooth'
+                    });
+                });
+                
+                rightArrow.addEventListener('click', function() {
+                    testimonialGrid.scrollBy({
+                        left: scrollAmount,
+                        behavior: 'smooth'
+                    });
+                });
+
+                // Update arrow states based on scroll position
+                function updateArrows() {
+                    const maxScroll = testimonialGrid.scrollWidth - testimonialGrid.clientWidth;
+                    leftArrow.disabled = testimonialGrid.scrollLeft <= 0;
+                    rightArrow.disabled = testimonialGrid.scrollLeft >= maxScroll - 10;
+                }
+
+                testimonialGrid.addEventListener('scroll', updateArrows);
+                window.addEventListener('resize', updateArrows);
+                updateArrows(); // Initial check
+            }
+        });
+    </script>
+    
+    <script>
+        // Clinic Interior Slideshow
+        document.addEventListener('DOMContentLoaded', function() {
+            let currentSlide = 0;
+            const slides = document.querySelectorAll('.clinic-slideshow .slide');
+            const dots = document.querySelectorAll('.slide-dots .dot');
+
+            function showSlide(index) {
+                slides.forEach((slide, i) => {
+                    slide.classList.remove('active');
+                    dots[i].classList.remove('active');
+                });
+                slides[index].classList.add('active');
+                dots[index].classList.add('active');
+            }
+
+            function nextSlide() {
+                currentSlide = (currentSlide + 1) % slides.length;
+                showSlide(currentSlide);
+            }
+
+            window.goToSlide = function(index) {
+                currentSlide = index;
+                showSlide(currentSlide);
+            }
+
+            // Auto slide every 5 seconds
+            setInterval(nextSlide, 5000);
+        });
+    </script>
+</head>
+<body>
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/6281539388871?text=Halo%20UniHealth/Unimind,%20saya%20mau%20tanya%20soal%20jadwal%20dan%20promo%20konsultasi%20psikologi." class="whatsapp-float" target="_blank" onclick="trackLead()">
+        💬
+    </a>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Sering Capek Mental Tapi Bingung Harus Cerita ke Siapa?<br>Unimind Kini Hadir Siap Dengerin Cerita Kamu</h1>
+            <p class="subheadline">UniHealth PIK2 bukan cuma klinik biasa yang urusin sakit fisik aja. Lewat <strong>Unimind Psychology Consultation</strong>, kami hadir dengan tim psikolog profesional yang siap bantu kamu jaga kesehatan mental—karena <strong>Beyond Physical Health</strong> bukan cuma slogan, tapi komitmen kami.</p>
+            
+            <div class="clinic-photo-hero">
+                <img src="klinik-luar.jpg" alt="UniHealth PIK2 General & IV Clinic">
+            </div>
+            
+            <div class="pain-points">
+                <p style="margin-bottom: 15px; font-weight: bold;">Rasanya familiar nggak sih:</p>
+                <ul>
+                    <li>Sering overthinking sebelum tidur, pikiran nggak bisa diem</li>
+                    <li>Ngerasa nggak ada yang benar-benar ngerti perasaan kamu</li>
+                    <li>Kerja/kuliah jalan, tapi hati rasanya kosong</li>
+                    <li>Emosi gampang meledak atau sebaliknya: kebiasaan dipendam sendiri</li>
+                </ul>
+            </div>
+
+            <a href="https://wa.me/6281539388871?text=Halo%20UniHealth/Unimind,%20saya%20mau%20tanya%20soal%20jadwal%20dan%20promo%20konsultasi%20psikologi." class="cta-button" target="_blank" onclick="trackLead()">💬 Curhat ke Admin Sekarang</a>
+            
+            <p class="secondary-cta">Masih bingung cocoknya sesi apa? Chat dulu aja, tim kami bantu jelaskan.</p>
+        </div>
+    </section>
+
+    <!-- Why Help Section -->
+    <section class="section-light">
+        <div class="container">
+            <h2>Kamu Nggak 'Lebay' Hanya Karena Butuh Bantuan Profesional.</h2>
+            <p>Kita hidup di zaman yang serba cepat. Tuntutan kerja, ekspektasi keluarga, hubungan yang rumit, plus tekanan untuk "terlihat baik-baik aja" di media sosial—semua itu bisa bikin mental kita kelelahan. Dan itu <strong>wajar</strong>.</p>
+            
+            <p>Stres, cemas, burnout, atau sedih berkepanjangan bukan berarti kamu lemah. Justru, mengakui kalau kamu butuh bantuan dan mau ngobrol sama psikolog adalah bentuk <strong>sayang sama diri sendiri</strong>.</p>
+            
+            <p>Konsultasi psikologi bukan tempat kamu bakal diinterogasi atau divonis. Ini adalah <strong>ruang aman</strong> buat kamu memahami diri sendiri lebih baik, melepas beban yang udah lama kamu pendam, dan menemukan cara untuk keluar dari situasi yang bikin kamu stuck.</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section-gray">
+        <div class="container">
+            <h2>UniHealth PIK2: Nggak Cuma Obatin Fisik, Tapi Juga Jagain Mental Kamu.</h2>
+            <p><strong>UniHealth PIK2 General & IV Clinic</strong> adalah klinik modern yang fokusnya bukan cuma mengobati penyakit, tapi juga <strong>mencegah dan menjaga wellness jangka panjang</strong>. Kami percaya bahwa kesehatan itu holistik—fisik dan mental sama pentingnya.</p>
+            
+            <p>Makanya, kami meluncurkan <strong>Unimind Psychology Consultation</strong>: layanan konsultasi psikologi dengan psikolog-psikolog terkurasi yang punya jam terbang tinggi dan pendekatan yang manusiawi.</p>
+            
+            <p>Ruang konsultasi kami didesain <strong>hangat, homey, dan bikin kamu nyaman</strong> untuk mulai membuka diri. Bayangin: kursi yang empuk, pencahayaan yang lembut, dan psikolog yang menyambut kamu dengan senyum tulus—bukan tatapan menghakimi.</p>
+        </div>
+    </section>
+
+    <!-- NEW Psychologist Profiles Section -->
+    <section class="psychologist-section">
+        <div class="container">
+            <h2>Kenalan Dulu Sama Psikolog yang Siap Dengar Cerita Kamu</h2>
+            
+            <!-- Row 1 -->
+            <div class="psychologist-grid-new">
+                <div class="psy-card-new pink-bg">
+                    <div class="psy-name">Dian<br>Junita, M.Psi</div>
+                    <div class="psy-photo">
+                        <img src="dian.jpg" alt="Dian Junita">
+                    </div>
+                    <div class="experience-badge">⭐ >1.000 jam pengalaman</div>
+                    <div class="psy-schedule">
+                        <strong>Jam Praktek:</strong><br>
+                        Rabu 16.00–21.00<br>
+                        Kamis 09.00–14.00, Jumat 09.00–21.00
+                    </div>
+                </div>
+
+                <div class="psy-card-new blue-bg">
+                    <div class="psy-name">Dyah<br>Larasati, M.Psi</div>
+                    <div class="psy-photo">
+                        <img src="dyah.jpg" alt="Dyah Larasati">
+                    </div>
+                    <div class="experience-badge">⭐ >5.000 jam pengalaman</div>
+                    <div class="psy-schedule">
+                        <strong>Jam Praktek:</strong><br>
+                        By appointment
+                    </div>
+                </div>
+
+                <div class="psy-card-new pink-bg">
+                    <div class="psy-name">Veronica<br>Clarissa, M.Psi</div>
+                    <div class="psy-photo">
+                        <img src="veronica.jpg" alt="Veronica Clarissa">
+                    </div>
+                    <div class="experience-badge">⭐ >5.000 jam pengalaman</div>
+                    <div class="psy-schedule">
+                        <strong>Jam Praktek:</strong><br>
+                        Senin–Selasa 11.00–17.00<br>
+                        Jumat 11.00–17.00
+                    </div>
+                </div>
+            </div>
+
+            <!-- Row 2 -->
+            <div class="psychologist-grid-new" style="margin-top: 15px;">
+                <div class="psy-card-new blue-bg">
+                    <div class="psy-name">Ikhsan Bella<br>Persada, M.Psi</div>
+                    <div class="psy-photo">
+                        <img src="bella.jpg" alt="Ikhsan Bella Persada">
+                    </div>
+                    <div class="experience-badge">⭐ >5.000 jam pengalaman</div>
+                    <div class="psy-schedule">
+                        <strong>Jam Praktek:</strong><br>
+                        Senin–Jumat 19.00–21.00<br>
+                        Sabtu 09.00–10.00 (Online only)
+                    </div>
+                </div>
+
+                <div class="psy-card-new pink-bg">
+                    <div class="psy-name">Sarah Rumasita<br>Siahaan, MA, M.Psi</div>
+                    <div class="psy-photo">
+                        <img src="sarah.jpg" alt="Sarah Rumasita Siahaan">
+                    </div>
+                    <div class="experience-badge">⭐ >5.000 jam pengalaman</div>
+                    <div class="psy-schedule">
+                        <strong>Jam Praktek:</strong><br>
+                        Selasa & Minggu 14.00–19.00
+                    </div>
+                </div>
+
+                <div class="psy-card-new blue-bg">
+                    <div class="psy-name">Natasha<br>Trenggono, M.Psi</div>
+                    <div class="psy-photo">
+                        <img src="natasha.jpg" alt="Natasha Trenggono">
+                    </div>
+                    <div class="experience-badge">⭐ >1.000 jam pengalaman</div>
+                    <div class="psy-schedule">
+                        <strong>Jam Praktek:</strong><br>
+                        Senin 09.00–11.00, Selasa 09.00–21.00<br>
+                        Rabu 15.00–21.00, Kamis 09.00–14.00<br>
+                        Minggu 09.00–12.00
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="https://wa.me/6281539388871?text=Halo%20UniHealth/Unimind,%20saya%20mau%20tanya%20soal%20jadwal%20dan%20promo%20konsultasi%20psikologi." class="cta-button" target="_blank">Cek Jadwal Kosong</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="section-gray">
+        <div class="container">
+            <h2>Caranya Simpel, Tinggal 4 Langkah Aja.</h2>
+            
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Chat via WhatsApp</h3>
+                    <p>Klik tombol WhatsApp dan ceritakan singkat kondisi kamu. Nggak perlu panjang lebar—cukup kasih gambaran aja.</p>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Tim Admin Bantu Rekomendasi</h3>
+                    <p>Tim admin kami yang ramah bakal bantu rekomendasikan psikolog yang cocok, tipe sesi, info jadwal, dan biaya.</p>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Konfirmasi & Pembayaran</h3>
+                    <p>Setelah dapat jadwal yang pas, kamu tinggal konfirmasi. Proses pembayaran juga mudah kok.</p>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Mulai Sesi Konsultasi</h3>
+                    <p>Datang ke klinik atau join link online untuk mulai sesi. Psikolog kamu udah siap mendengar dan menemani.</p>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="https://wa.me/6281539388871?text=Halo%20UniHealth/Unimind,%20saya%20mau%20tanya%20soal%20jadwal%20dan%20promo%20konsultasi%20psikologi." class="cta-button" target="_blank">Mulai Langkah Pertamamu</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="section-light">
+        <div class="container">
+            <h2>Investasi untuk Ketenangan Pikiran Kamu.</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 40px;">Ini bukan sekadar "biaya ngobrol". Ini adalah <strong>investasi untuk kesehatan mental dan kualitas hidup kamu jangka panjang</strong>. Pikiran yang tenang, emosi yang stabil, dan hidup yang lebih terasa ringan—semua itu priceless, kan?</p>
+            
+            <div class="pricing-grid">
+                <div class="price-card">
+                    <h3>💜 Sesi Offline</h3>
+                    <p>Tatap Muka di Klinik</p>
+                    <div class="old-price">Rp 499.000</div>
+                    <div class="new-price">Rp 399K</div>
+                    <p>Per sesi - Konsultasi face-to-face di ruangan yang nyaman</p>
+                </div>
+
+                <div class="price-card">
+                    <h3>💻 Sesi Online</h3>
+                    <p>Video Call dari Rumah</p>
+                    <div class="old-price">Rp 349.000</div>
+                    <div class="new-price">Rp 299K</div>
+                    <p>Per sesi - Lebih fleksibel, tetap privat dan nyaman</p>
+                </div>
+
+                <div class="price-card bonus-card">
+                    <h3>🎁 BONUS SPESIAL</h3>
+                    <p style="font-weight: bold; font-size: 1.2em; margin: 20px 0;">FREE 15 Menit Online Assessment</p>
+                    <p>Untuk semua klien baru! Sesi singkat untuk mapping masalah utama kamu sebelum masuk sesi penuh.</p>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="https://wa.me/6281539388871?text=Halo%20UniHealth/Unimind,%20saya%20mau%20tanya%20soal%20jadwal%20dan%20promo%20konsultasi%20psikologi." class="cta-button" target="_blank">Booking Sesi Pertama</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof -->
+    <section class="section-gray">
+        <div class="container">
+            <h2>Tempat yang Kami Siapkan Khusus Buat Kamu</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto;">Nyaman, hangat, dan siap mendengar semua ceritamu.</p>
+            
+            <div class="clinic-slideshow">
+                <div class="slides">
+                    <img src="klinik-dalam-1.jpg" alt="Ruangan Klinik UniHealth" class="slide active">
+                    <img src="klinik-dalam-2.jpg" alt="Ruangan Klinik UniHealth" class="slide">
+                </div>
+                <div class="slide-dots">
+                    <span class="dot active" onclick="goToSlide(0)"></span>
+                    <span class="dot" onclick="goToSlide(1)"></span>
+                </div>
+            </div>
+            
+            <p style="text-align: center; max-width: 800px; margin: 20px auto; font-weight: bold; font-size: 1.2em;">Yang pasti, semua cerita kamu aman dan 100% rahasia. 🔒</p>
+
+            <div class="testimonial-grid-stacked">
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testi-text">"Awalnya aku ragu, tapi pas masuk ruangan konsultasi, rasanya kayak lagi ngobrol sama teman yang beneran dengerin. Nggak ada judgement sama sekali."</p>
+                    <p class="testi-author">— S.A., 28 tahun</p>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testi-text">"Psikolognya sabar banget dan nggak ngeburu-buru. Aku yang tadinya bingung mau cerita apa, jadi bisa ngomong dengan tenang."</p>
+                    <p class="testi-author">— D.P., 24 tahun</p>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testi-text">"Sesi online-nya ternyata nyaman juga! Aku bisa konsultasi dari rumah tanpa harus keluar. Prosesnya gampang banget."</p>
+                    <p class="testi-author">— R.M., 31 tahun</p>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testi-text">"Ruangannya cozy banget, nggak seperti klinik pada umumnya. Bikin aku lebih rileks buat cerita."</p>
+                    <p class="testi-author">— L.K., 26 tahun</p>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testi-text">"Setelah beberapa sesi, aku mulai ngerti pola pikir aku yang toxic. Psikolognya kasih perspektif baru yang sangat membantu."</p>
+                    <p class="testi-author">— A.W., 29 tahun</p>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testi-text">"Free assessment 15 menit-nya helpful banget buat aku yang masih ragu-ragu. Jadi tau apa yang bisa dibantu."</p>
+                    <p class="testi-author">— F.T., 23 tahun</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Closing CTA -->
+    <section class="hero">
+        <div class="container">
+            <h2 style="color: white;">Kalau Hati dan Pikiran Kamu Lagi Capek, Itu Tanda untuk Pelan-Pelan Dirawat.</h2>
+            <p style="font-size: 1.2em; margin: 30px auto; max-width: 800px;">Nggak ada waktu yang "sempurna" untuk mulai. Kalau hari ini kamu merasa siap untuk ambil langkah kecil, yuk hubungi kami sekarang.</p>
+            
+            <a href="https://wa.me/6281539388871?text=Halo%20UniHealth/Unimind,%20saya%20mau%20tanya%20soal%20jadwal%20dan%20promo%20konsultasi%20psikologi." class="cta-button" target="_blank" style="font-size: 1.2em;">💬 Yuk, Mulai Cerita Sekarang</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="container">
+            <h3 style="color: white; margin-bottom: 20px;">UniHealth PIK2 General & IV Clinic</h3>
+            <div class="footer-info">
+                <p>📍 <strong>Alamat Lengkap:</strong><br>
+                Ruko Osaka OTA-B09<br>
+                Pantai Indah Kapuk 2 (PIK2)<br>
+                Tangerang, Banten</p>
+                
+                <p>📱 <strong>WhatsApp:</strong> +62 815-3938-8871</p>
+                
+                <p>📸 <strong>Instagram:</strong><br>
+                @unihealth.idn | @unimind.idn</p>
+                
+                <p>🕐 <strong>Jam Operasional:</strong><br>
+                Senin - Minggu (Sesuai jadwal psikolog)<br>
+                Hubungi admin untuk info lengkap</p>
+            </div>
+            
+            <p style="margin-top: 30px; opacity: 0.8;">Unimind Psychology Consultation — Beyond Physical Health</p>
+            <p style="opacity: 0.7; font-size: 0.9em;">We care for more than just illnesses, We care for you.</p>
+        </div>
+    </div>
+</body>
+</html>
