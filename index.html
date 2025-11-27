@@ -299,6 +299,26 @@
                 font-size: 0.7em;
                 padding: 8px;
             }
+
+            .container {
+                padding: 0 15px;
+            }
+
+            h2 {
+                font-size: 1.5em;
+            }
+
+            p {
+                font-size: 0.95em;
+            }
+
+            .hero h1 {
+                font-size: 1.6em;
+            }
+
+            .hero .subheadline {
+                font-size: 1em;
+            }
         }
         
         @media (max-width: 480px) {
@@ -308,34 +328,87 @@
             }
             
             .psy-card-new {
-                padding: 10px 5px;
+                padding: 8px 4px;
                 border-radius: 10px;
             }
             
             .psy-card-new .psy-name {
-                font-size: 0.75em;
-                margin-bottom: 10px;
+                font-size: 0.65em;
+                margin-bottom: 8px;
             }
             
             .psy-card-new .psy-photo {
                 width: 100%;
-                height: 100px;
+                height: 80px;
                 border-radius: 8px;
             }
             
             .psy-card-new .experience-badge {
-                font-size: 0.6em;
-                padding: 4px 8px;
+                font-size: 0.5em;
+                padding: 3px 6px;
             }
             
             .psy-card-new .psy-schedule {
-                font-size: 0.6em;
-                padding: 6px;
+                font-size: 0.5em;
+                padding: 5px;
                 border-radius: 6px;
             }
             
             .psychologist-section h2 {
+                font-size: 1.3em;
+            }
+
+            h2 {
+                font-size: 1.3em;
+            }
+
+            p {
+                font-size: 0.9em;
+            }
+
+            .hero h1 {
                 font-size: 1.4em;
+            }
+
+            .hero .subheadline {
+                font-size: 0.9em;
+            }
+
+            .pain-points li {
+                font-size: 0.85em;
+            }
+
+            .cta-button {
+                padding: 14px 28px;
+                font-size: 0.95em;
+            }
+
+            .step h3 {
+                font-size: 1em;
+            }
+
+            .step p {
+                font-size: 0.85em;
+            }
+
+            .price-card h3 {
+                font-size: 1.1em;
+            }
+
+            .price-card p {
+                font-size: 0.85em;
+            }
+
+            .new-price {
+                font-size: 1.8em;
+            }
+
+            .testimonial-card .testi-text {
+                font-size: 0.85em;
+            }
+
+            .testimonial-card .testi-author {
+                font-size: 0.75em;
             }
         }
 
@@ -529,6 +602,16 @@
             width: 100%;
         }
 
+        @media (max-width: 480px) {
+            .bonus-center .price-card {
+                max-width: 100%;
+            }
+
+            .price-card {
+                padding: 20px 15px;
+            }
+        }
+
         /* Testimonials - Stacked Grid */
         .testimonial-grid-stacked {
             display: grid;
@@ -575,6 +658,13 @@
             color: #0066CC;
             font-weight: 600;
             margin-bottom: 0;
+        }
+
+        @media (max-width: 600px) {
+            .testimonial-grid-stacked {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
         }
 
         /* Footer */
@@ -638,16 +728,16 @@
         }
 
         @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 1.8em;
-            }
-            
-            h2 {
-                font-size: 1.8em;
-            }
-
             .steps {
                 grid-template-columns: 1fr;
+            }
+
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                font-size: 24px;
+                bottom: 20px;
+                right: 20px;
             }
         }
     </style>
