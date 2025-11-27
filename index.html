@@ -459,9 +459,19 @@
         /* Pricing */
         .pricing-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            grid-template-columns: repeat(2, 1fr);
             gap: 25px;
             margin-top: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        @media (max-width: 600px) {
+            .pricing-grid {
+                grid-template-columns: 1fr;
+                max-width: 350px;
+            }
         }
 
         .price-card {
@@ -506,6 +516,17 @@
 
         .bonus-card p {
             color: white;
+        }
+
+        .bonus-center {
+            display: flex;
+            justify-content: center;
+            margin-top: 25px;
+        }
+
+        .bonus-center .price-card {
+            max-width: 400px;
+            width: 100%;
         }
 
         /* Testimonials - Stacked Grid */
@@ -570,6 +591,25 @@
 
         .footer-info p {
             margin: 15px 0;
+        }
+
+        .maps-container {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto 30px;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        .maps-container iframe {
+            width: 100%;
+            height: 300px;
+        }
+
+        @media (max-width: 480px) {
+            .maps-container iframe {
+                height: 250px;
+            }
         }
 
         /* Floating WhatsApp Button */
@@ -699,7 +739,7 @@
     <section class="hero">
         <div class="container">
             <h1>Sering Capek Mental Tapi Bingung Harus Cerita ke Siapa?<br>Unimind Kini Hadir Siap Dengerin Cerita Kamu</h1>
-            <p class="subheadline">UniHealth PIK2 bukan cuma klinik biasa yang urusin sakit fisik aja. Lewat <strong>Unimind Psychology Consultation</strong>, kami hadir dengan tim psikolog profesional yang siap bantu kamu jaga kesehatan mental—karena <strong>Beyond Physical Health</strong> bukan cuma slogan, tapi komitmen kami.</p>
+            <p class="subheadline">UniHealth PIK2 bukan cuma klinik biasa yang urusin sakit fisik aja. Lewat <strong>Unimind Psychology Consultation</strong>, ada psikolog profesional yang siap bantu kamu jaga kesehatan mental—karena <strong>Beyond Physical Health</strong> bukan cuma slogan, tapi komitmen kami.</p>
             
             <div class="clinic-photo-hero">
                 <img src="klinik-luar.jpg" alt="UniHealth PIK2 General & IV Clinic">
@@ -724,12 +764,12 @@
     <!-- Why Help Section -->
     <section class="section-light">
         <div class="container">
-            <h2>Kamu Nggak 'Lebay' Hanya Karena Butuh Bantuan Profesional.</h2>
+            <h2>Wajar Kok Kalau Kamu Butuh Bantuan Profesional</h2>
             <p>Kita hidup di zaman yang serba cepat. Tuntutan kerja, ekspektasi keluarga, hubungan yang rumit, plus tekanan untuk "terlihat baik-baik aja" di media sosial—semua itu bisa bikin mental kita kelelahan. Dan itu <strong>wajar</strong>.</p>
             
             <p>Stres, cemas, burnout, atau sedih berkepanjangan bukan berarti kamu lemah. Justru, mengakui kalau kamu butuh bantuan dan mau ngobrol sama psikolog adalah bentuk <strong>sayang sama diri sendiri</strong>.</p>
             
-            <p>Konsultasi psikologi bukan tempat kamu bakal diinterogasi atau divonis. Ini adalah <strong>ruang aman</strong> buat kamu memahami diri sendiri lebih baik, melepas beban yang udah lama kamu pendam, dan menemukan cara untuk keluar dari situasi yang bikin kamu stuck.</p>
+            <p>Konsultasi psikologi bukan tempat kamu bakal diinterogasi atau divonis. Ini adalah <strong>ruang aman</strong> buat kamu memahami diri sendiri lebih baik, melepas beban yang udah lama kamu pendam, dan nemuin jalan keluar dari situasi yang bikin kamu mandek.</p>
         </div>
     </section>
 
@@ -737,11 +777,9 @@
     <section class="section-gray">
         <div class="container">
             <h2>UniHealth PIK2: Nggak Cuma Obatin Fisik, Tapi Juga Jagain Mental Kamu.</h2>
-            <p><strong>UniHealth PIK2 General & IV Clinic</strong> adalah klinik modern yang fokusnya bukan cuma mengobati penyakit, tapi juga <strong>mencegah dan menjaga wellness jangka panjang</strong>. Kami percaya bahwa kesehatan itu holistik—fisik dan mental sama pentingnya.</p>
+            <p><strong>UniHealth PIK2 General & IV Clinic</strong> adalah klinik modern yang fokusnya bukan cuma mengobati penyakit, tapi juga <strong>jaga kesehatan jangka panjang</strong>. Buat kami, kesehatan fisik dan mental sama pentingnya.</p>
             
-            <p>Makanya, kami meluncurkan <strong>Unimind Psychology Consultation</strong>: layanan konsultasi psikologi dengan psikolog-psikolog terkurasi yang punya jam terbang tinggi dan pendekatan yang manusiawi.</p>
-            
-            <p>Ruang konsultasi kami didesain <strong>hangat, homey, dan bikin kamu nyaman</strong> untuk mulai membuka diri. Bayangin: kursi yang empuk, pencahayaan yang lembut, dan psikolog yang menyambut kamu dengan senyum tulus—bukan tatapan menghakimi.</p>
+            <p>Makanya, kami meluncurkan <strong>Unimind Psychology Consultation</strong>: layanan konsultasi psikologi dengan psikolog berpengalaman yang beneran peduli.</p>
         </div>
     </section>
 
@@ -879,8 +917,8 @@
     <!-- Pricing -->
     <section class="section-light">
         <div class="container">
-            <h2>Investasi untuk Ketenangan Pikiran Kamu.</h2>
-            <p style="text-align: center; max-width: 800px; margin: 0 auto 40px;">Ini bukan sekadar "biaya ngobrol". Ini adalah <strong>investasi untuk kesehatan mental dan kualitas hidup kamu jangka panjang</strong>. Pikiran yang tenang, emosi yang stabil, dan hidup yang lebih terasa ringan—semua itu priceless, kan?</p>
+            <h2>Berapa Sih Biayanya?</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 40px;">Lebih murah dari ngopi tiap hari, tapi efeknya buat jangka panjang.</p>
             
             <div class="pricing-grid">
                 <div class="price-card">
@@ -888,7 +926,7 @@
                     <p>Tatap Muka di Klinik</p>
                     <div class="old-price">Rp 499.000</div>
                     <div class="new-price">Rp 399K</div>
-                    <p>Per sesi - Konsultasi face-to-face di ruangan yang nyaman</p>
+                    <p>Per sesi (60 menit) - Konsultasi langsung di ruangan yang nyaman</p>
                 </div>
 
                 <div class="price-card">
@@ -896,13 +934,15 @@
                     <p>Video Call dari Rumah</p>
                     <div class="old-price">Rp 349.000</div>
                     <div class="new-price">Rp 299K</div>
-                    <p>Per sesi - Lebih fleksibel, tetap privat dan nyaman</p>
+                    <p>Per sesi (60 menit) - Lebih fleksibel, tetap privat dan nyaman</p>
                 </div>
+            </div>
 
+            <div class="bonus-center">
                 <div class="price-card bonus-card">
                     <h3>🎁 BONUS SPESIAL</h3>
                     <p style="font-weight: bold; font-size: 1.2em; margin: 20px 0;">FREE 15 Menit Online Assessment</p>
-                    <p>Untuk semua klien baru! Sesi singkat untuk mapping masalah utama kamu sebelum masuk sesi penuh.</p>
+                    <p>Untuk semua klien baru! Sesi singkat untuk kenali masalah utama kamu sebelum masuk sesi penuh.</p>
                 </div>
             </div>
 
@@ -912,7 +952,7 @@
         </div>
     </section>
 
-    <!-- Social Proof -->
+    <!-- Room Section -->
     <section class="section-gray">
         <div class="container">
             <h2>Tempat yang Kami Siapkan Khusus Buat Kamu</h2>
@@ -930,11 +970,18 @@
             </div>
             
             <p style="text-align: center; max-width: 800px; margin: 20px auto; font-weight: bold; font-size: 1.2em;">Yang pasti, semua cerita kamu aman dan 100% rahasia. 🔒</p>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section-light">
+        <div class="container">
+            <h2>Apa Kata Mereka yang Udah Coba?</h2>
 
             <div class="testimonial-grid-stacked">
                 <div class="testimonial-card">
                     <div class="stars">⭐⭐⭐⭐⭐</div>
-                    <p class="testi-text">"Awalnya aku ragu, tapi pas masuk ruangan konsultasi, rasanya kayak lagi ngobrol sama teman yang beneran dengerin. Nggak ada judgement sama sekali."</p>
+                    <p class="testi-text">"Awalnya aku ragu, tapi pas masuk ruangan konsultasi, rasanya kayak lagi ngobrol sama teman yang beneran dengerin. Nggak dihakimi sama sekali."</p>
                     <p class="testi-author">— S.A., 28 tahun</p>
                 </div>
 
@@ -952,19 +999,19 @@
 
                 <div class="testimonial-card">
                     <div class="stars">⭐⭐⭐⭐⭐</div>
-                    <p class="testi-text">"Ruangannya cozy banget, nggak seperti klinik pada umumnya. Bikin aku lebih rileks buat cerita."</p>
+                    <p class="testi-text">"Ruangannya nyaman banget, nggak kayak klinik pada umumnya. Bikin aku lebih rileks buat cerita."</p>
                     <p class="testi-author">— L.K., 26 tahun</p>
                 </div>
 
                 <div class="testimonial-card">
                     <div class="stars">⭐⭐⭐⭐⭐</div>
-                    <p class="testi-text">"Setelah beberapa sesi, aku mulai ngerti pola pikir aku yang toxic. Psikolognya kasih perspektif baru yang sangat membantu."</p>
+                    <p class="testi-text">"Setelah beberapa sesi, aku akhirnya bisa tidur nyenyak tanpa overthinking. Psikolognya kasih perspektif baru yang beneran ngubah cara pikirku."</p>
                     <p class="testi-author">— A.W., 29 tahun</p>
                 </div>
 
                 <div class="testimonial-card">
                     <div class="stars">⭐⭐⭐⭐⭐</div>
-                    <p class="testi-text">"Free assessment 15 menit-nya helpful banget buat aku yang masih ragu-ragu. Jadi tau apa yang bisa dibantu."</p>
+                    <p class="testi-text">"Free assessment 15 menitnya ngebantu banget buat aku yang masih ragu-ragu. Jadi tau apa yang bisa dibantu."</p>
                     <p class="testi-author">— F.T., 23 tahun</p>
                 </div>
             </div>
@@ -974,7 +1021,7 @@
     <!-- Closing CTA -->
     <section class="hero">
         <div class="container">
-            <h2 style="color: white;">Kalau Hati dan Pikiran Kamu Lagi Capek, Itu Tanda untuk Pelan-Pelan Dirawat.</h2>
+            <h2 style="color: white;">Kalau Hati dan Pikiran Kamu Lagi Capek, Saatnya Kasih Waktu Buat Diri Sendiri.</h2>
             <p style="font-size: 1.2em; margin: 30px auto; max-width: 800px;">Nggak ada waktu yang "sempurna" untuk mulai. Kalau hari ini kamu merasa siap untuk ambil langkah kecil, yuk hubungi kami sekarang.</p>
             
             <a href="https://wa.me/6281539388871?text=Halo%20UniHealth/Unimind,%20saya%20mau%20tanya%20soal%20jadwal%20dan%20promo%20konsultasi%20psikologi." class="cta-button" target="_blank" style="font-size: 1.2em;">💬 Yuk, Mulai Cerita Sekarang</a>
@@ -985,6 +1032,11 @@
     <div class="footer">
         <div class="container">
             <h3 style="color: white; margin-bottom: 20px;">UniHealth PIK2 General & IV Clinic</h3>
+            
+            <div class="maps-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3967.5361154829934!2d106.67786357455843!3d-6.058184259458747!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6a05980bbd0d33%3A0x7fc980deb2fe1b43!2sUniHealth%20General%20%26%20IV%20Clinic%20PIK%202!5e0!3m2!1sid!2sid!4v1764253375449!5m2!1sid!2sid" width="100%" height="300" style="border:0; border-radius: 15px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            
             <div class="footer-info">
                 <p>📍 <strong>Alamat Lengkap:</strong><br>
                 Ruko Osaka OTA-B09<br>
